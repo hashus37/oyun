@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#threejs-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Navbar'dan daha altta olacak */
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+
+
+
+
+
+/* Navbar'a arka plan rengi eklemeyerek sayfa içeriğinin üzerinde gösterme */
+.navbar {
+    background-color: transparent !important;
+    width: 100vw;
+    z-index: 2;
+}
+
+/* Navbar linklerinin rengini beyaz yapma */
+.navbar .navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+#header {
+    height:100vh;
+    display: flex;
+    align-items: center ;
+    z-index: 2;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+#interactive-image {
+    transition: transform 0.5s ease-in-out;
+}
+
+
+#services {
+    
+    /* height: 60vh; */
+    z-index: 2;
+
+}
+
+.services-container{
+    position: relative;
+    display: flex;
+    padding: 80px 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+
+}
+.services-card{
+    position: relative;
+    width: 350px;
+    height: 230px;
+    background:#333;
+    transition: 0.5s;
+}
+.services-card:hover
+{
+    height: 450px;
+}
+.services-card .lines{
+    position: absolute;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+}
+.services-card .lines::before{
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 600px;
+   height: 120px;
+   background: linear-gradient(transparent,#dc3545 , #dc3545 ,#dc3545, transparent);
+   animation: animate 4s linear infinite;
+   animation-play-state: paused;
+}
+.services-card:hover .lines::before{
+    animation-play-state: running;
+}
+@keyframes animate{
+
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+
+}
+.services-card .lines::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background-color: #1f1f1f;
+}
+.services-card .imgBx {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translateX(-50%);
+    background: #000;
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.services-card:hover .imgBx
+{
+    top: 25px;
+    width: 200px;
+    height: 200px;
+}
+
+.services-card .imgBx::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(transparent,#ffc107 ,#ffc107 ,#ffc107 , transparent);
+    animation: animate2 6s linear infinite;
+}
+.services-card:hover .imgBx::before
+{
+    animation-play-state: running;
+}
+@keyframes animate2 {
+    0%
+    {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100%
+    {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+.services-card .imgBx::after{
+    content:'';
+    position: absolute;
+    inset: 3px;
+    background: #1f1f1f;
+}
+.services-card .imgBx img{
+    position: absolute;
+    width:100px;
+    z-index: 1;
+    filter: invert(1);
+    opacity: 0.5s;
+    transition: 0.5s;
+}
+.services-card:hover .imgBx img{
+    opacity: 1;
+}
+.services-card .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.services-card .content .details{
+    padding: 30px 20px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform:translateY(145px)
+}
+.services-card:hover .content .details{
+    transform: translateY(0px);
+}
+.services-card .content .details h2{
+    font-size: 1.5rem;
+    font-weight: 500px;
+    color: #45f3ff;
+    line-height: 1.2em;
+}
+.services-card .content .details p{
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s; 
+}
+.services-card:hover .content .details p
+{
+    opacity: 1;
+}
+.services-card .content .details a{
+    display: inline-block;
+    padding: 8px 15px;
+    background: #45f3ff;
+    color: #292929;
+    margin-top: 10px;
+    font-weight: 500px;
+    text-decoration: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+.services-card:hover .content .details p ,
+.services-card:hover .content .details a{
+    opacity: 1;
+}
+
+/* about  */
+#about .image-container {
+    animation: floatImage 5s ease-in-out infinite;
+    backface-visibility: hidden;
+    will-change: transform;
+}
+
+@keyframes floatImage {
+    0% {
+     
+    }
+    50% {
+        transform: translatey(-8.2rem);
+  
+    }
+    100% {
+       
+    }
+}
+
+/* about end  */
+
+/* contact start  */
+.contact-form  input{
+    background-color: #292929;
+    color: #ffc107 !important;
+    border: 1px solid #ffc107 !important;
+}
+.contact-form textarea {
+    background-color: #292929;
+    color: #ffc107 !important;
+    border: 1px solid #ffc107 !important;
+
+}
+.contact-form input:focus{
+    opacity: .3;
+}
+.contact-form textarea:focus{
+    opacity: .3;
+}
+
+.contact-form .form-control::placeholder {
+    color:#dc3545 ; /* İstediğiniz rengi buraya ekleyin */
+}
+
+/* contact end  */
