@@ -10,6 +10,7 @@
         <title>Document</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="style.css">
         <script type="module">
             import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
@@ -41,8 +42,9 @@
                         <a class="nav-link fw-bold ms-3" aria-current="page" href="#home">Ana Sayfa</a>
                         <a class="nav-link fw-bold ms-3" href="#services">Hizmetlerimiz</a>
                         <a class="nav-link fw-bold ms-3" href="#about">Hakkımızda</a>
-                        <a class="nav-link fw-bold ms-3" href="#portfolio">Portfolyomuz</a>
+                        <a class="nav-link fw-bold ms-3" href="blog.html">Blog</a>
                         <a class="nav-link fw-bold ms-3" href="#contact">İletişim</a>
+                        <a class="nav-link fw-bold ms-3 text-success" href="#" >Satın Al</a>
                         </div>
                     </div>
                     </div>
@@ -59,7 +61,7 @@
                                 <h2 class="text-danger fw-bold display-2" >KENDİ </h2>
                                 <h1 class="text-warning fw-bold display-3">OYUNUNU YAŞA</h1>
                                 <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt et aperiam corporis ratione laudantium! Nostrum, cumque! Cumque blanditiis earum totam, sint odit pariatur voluptates assumenda? Vero blanditiis molestiae pariatur.</p>
-                                <a href="#" class="text-decoration-none text-success fs-3"><i class="fa fa-play" aria-hidden="true"></i> Oyun Oynanış Videosu</a>
+                                <a href="#" class="text-decoration-none text-success fs-3"><i class="fa fa-play" aria-hidden="true"></i> Oyun Videosu</a>   
                             </div>
                         </div>
                         <div class="col-md-7 mb-5">
@@ -235,7 +237,26 @@
                 </div>
             </section>
             <!-- contact section end  -->
+
+            <!-- footer section start  -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 mt-3 mb-3">
+                            <div class="social-links d-flex justify-content-center">
+                                <a href=""><i class="fa-brands fa-instagram fa-2x text-danger ms-2"></i></a>
+                                <a href=""><i class="fa-brands fa-youtube fa-2x text-danger ms-2"></i></a>
+                                <a href=""><i class="fa-brands fa-twitter fa-2x text-danger ms-2"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 footer-text">
+                        <p class="m-0 text-center text-danger fw-bold mb-4 ">&copy; 2023 GoalRush</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         
+            <!-- footer section end  -->
 
 
     <script>
