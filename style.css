@@ -38,6 +38,10 @@ canvas {
     color: white ;
     font-weight: bold;
 }
+.navbar .navbar-nav .nav-link:hover {
+    color:#dc3545 ;
+    font-weight: bold;
+}
 @keyframes heartbeat {
     0% {
         transform: scale(1);
@@ -190,7 +194,8 @@ canvas {
 }
 .services-card .imgBx img{
     position: absolute;
-    width:100px;
+    height: 98%;
+    width:98%;
     z-index: 1;
     filter: invert(1);
     opacity: 0.5s;
@@ -221,7 +226,7 @@ canvas {
 .services-card .content .details h2{
     font-size: 1.5rem;
     font-weight: 500px;
-    color: #45f3ff;
+    color: #ffc107;
     line-height: 1.2em;
 }
 .services-card .content .details p{
@@ -236,8 +241,8 @@ canvas {
 .services-card .content .details a{
     display: inline-block;
     padding: 8px 15px;
-    background: #45f3ff;
-    color: #292929;
+    /* background: #45f3ff; */
+    color: #fff;
     margin-top: 10px;
     font-weight: 500px;
     text-decoration: none;
@@ -303,4 +308,29 @@ canvas {
         height: auto !important;
     }
 } */
+
+#blog .card {
+    transition: transform 0.3s ease;
+}
+
+#blog .card:hover {
+    transform: scale(1.1);
+}
 /* blog end  */
+
+
+/* loader start  */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #000000;
+    z-index: 999;
+  } 
+/* loader end  */
+
